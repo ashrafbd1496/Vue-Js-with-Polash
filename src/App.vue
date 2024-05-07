@@ -1,10 +1,10 @@
 <script setup>
 import { ref } from "vue";
-import InvokeMethod from "./components/InvokeMethod.vue";
+import LifecycleHook from "./components/LifecycleHook.vue";
 </script>
 <template>
   <div>
-    <InvokeMethod />
+    <LifecycleHook />
   </div>
 </template>
 
