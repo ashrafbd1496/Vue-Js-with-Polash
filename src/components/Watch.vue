@@ -6,8 +6,8 @@ setInterval(() => {
   console.log(number);
 }, 3000);
 
-watch(number, (watchValue) => {
-  console.log("Watch Result-", watchValue);
+watch(number, (newValue,oldValue) => {
+  console.log("Old Value-", oldValue,'New Value-',newValue);
 });
 </script>
 
