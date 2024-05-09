@@ -12,7 +12,7 @@ function getUsers() {
     },
     {
       id: "0231",
-      name: "Nazrun",
+      name: "Nazrul",
       mobile: "5689",
     },
     {
