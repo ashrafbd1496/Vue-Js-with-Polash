@@ -1,20 +1,25 @@
 <script setup>
-import { ref, watch } from "vue";
-const number = ref(0);
+import { reactive, watch } from "vue";
+const form = reactive({
+  number: 0,
+});
 setInterval(() => {
-  number.value++;
-  console.log(number);
+  form.number++;
+  console.log(form);
 }, 3000);
 
-watch(number, (newValue,oldValue) => {
-  console.log("Old Value-", oldValue,'New Value-',newValue);
-});
+watch(
+  () => form.number,
+  (newValue, oldValue) => {
+    console.log("Old Value-", oldValue, "New Value-", newValue);
+  }
+);
 </script>
 
 <template>
   <div>
     <h1>Vue Watch</h1>
-    <div class="result">Number -{{ number }}</div>
+    <div class="result">Number -{{ form.number }}</div>
   </div>
 </template>
 

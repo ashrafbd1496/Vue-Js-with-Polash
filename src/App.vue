@@ -1,9 +1,9 @@
 <script setup>
-import Watch from "./components/Watch.vue";
+import Vuex from "./components/Vuex.vue";
 </script>
 <template>
   <div>
-    <Watch />
+    <Vuex />
   </div>
 </template>
 
