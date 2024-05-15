@@ -2,13 +2,23 @@ import { createStore } from "vuex";
 
 const store = createStore({
   state: {
-   bookList: ['Book 1', 'Book 2']
+    bookList: ["Book 1", "Book 2", "Book 3", "Book 4"],
   },
   mutations: {
-    // Your mutation functions
+    ADD_BOOK(state, data) {
+      state.bookList.push(data);
+    },
+    REMOVE_BOOK(state, data) {
+      state.bookList.pop(data);
+    },
   },
   actions: {
-    // Your action functions
+    addBook({commit}, data) {
+      commit("ADD_BOOK", data);
+    },
+    removeBook({commit}, data) {
+      commit("REMOVE_BOOK", data);
+    },
   },
   getters: {
     // Your getter functions
