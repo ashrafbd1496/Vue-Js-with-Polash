@@ -9,7 +9,8 @@
     </button>
     <ul>
       <li v-for="(book, index) in myBookList" :key="index">
-        <span class="book">{{ book }} </span><button @click="removeBook" class="del">Delete</button>
+        <span class="book">{{ book }} </span
+        ><button @click="removeBook(index)" class="del">Delete</button>
       </li>
     </ul>
   </div>
@@ -30,9 +31,10 @@ export default {
     addBook() {
       this.$store.dispatch("addBook", this.bookName);
     },
-    removeBook(){
-      this.$store.dispatch('removeBook',this.bookName);
-    }
+    removeBook(index) {
+      this.$store.dispatch("removeBook", index);
+      //console.log(index);
+    },
   },
 };
 </script>
